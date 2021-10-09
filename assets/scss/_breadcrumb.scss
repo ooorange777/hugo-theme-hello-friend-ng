@@ -2,14 +2,14 @@
 .breadcrumb {
     list-style: none;
 }
-.breadcrumb li{
+li.breadcrumb {
     display: inline-block;
     font-display: auto;
 }
-.breadcrumb li+li::before{
+li+li.breadcrumb::before {
     padding: 0px 0px;
     content: "/";
 }
-.breadcrumb li a{
+li a.breadcrumb {
     text-decoration: none;
 }
