@@ -2,6 +2,7 @@ baseURL = "https://example.com"
 title   = "Hello Friend NG"
 languageCode = "en-us"
 theme = "hello-friend-ng"
+siteCreatedTime = "2021-05-05T20:17:43+00:00"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
