@@ -11,4 +11,9 @@
     <a class="breadcrumb" href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
   </li>
   {{ end }}
-  
+<style>
+    .breadcrumb {list-style:none;}
+    .breadcrumb li{display:inline-block;font-display: auto;}
+    .breadcrumb li+li ::before{padding:0px 0px; content:"/";}
+    .breadcrumb li a{text-decoration:none;}
+  </style>
