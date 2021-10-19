@@ -4,7 +4,7 @@ languageCode = "en-us"
 theme = "hugo-theme-hello-friend-ng"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
-siteCreatedTime = "2021-05-05T20:17:43+00:00"
+
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
@@ -55,6 +55,7 @@ disableHugoGeneratorInject = false
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
+  siteCreatedTime = "2021-05-05T20:17:43+00:00"
 
   # Metadata mostly used in document's head
   # 
@@ -67,7 +68,7 @@ disableHugoGeneratorInject = false
   homeSubtitle = "Will tomorrow come?"
 
   # Set a background for the homepage
-  backgroundImage = "assets/images/background.jpg"
+  # backgroundImage = "/img/background.jpg"
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   #
@@ -153,6 +154,17 @@ disableHugoGeneratorInject = false
   #
   # [params.commento]
   #   url = ""
+
+  # Utterances is a lightweight comments widget built on GitHub issues.
+  # Use GitHub issues for blog comments, wiki pages and more!
+  # website: https://utteranc.es
+  # Create a public repo and install the utterances app before using.
+  #
+  [params.utteranc]
+  enable = false
+  repo = "" # your repo installed utterances
+  issueTerm = "title"
+  theme = "preferred-color-scheme"
 
   # Uncomment this if you want a portrait on your start page
   #
