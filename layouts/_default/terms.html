@@ -1,0 +1,30 @@
+{{ define "main" }}
+    {{ $paginator := .Paginate .Data.Terms }}
+	{{ $termLink := printf "/%s/%s/" .Data.Plural .Term | urlize }}
+    
+    <main class="posts">
+        <h1>Tags</h1>
+
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+            <div class="posts-group">
+
+                <ul class="posts-list">
+                    {{ range $paginator.ByCount }}
+                        <li class="post-item">
+                            <a href="{{ $termLink }}">
+                                <span class="post-title">{{ .Term }}</span>
+                                <span class="post-day">
+                                    {{ .Count }} 
+                                </span>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    {{ partial "pagination-list.html" . }}
+    </main>
+{{ end }}
