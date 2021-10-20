@@ -162,10 +162,10 @@ disableHugoGeneratorInject = false
   #
   [params.utteranc]
   enable = false
-  repo = "" # your repo installed utterances
+  repo = "" # your repo installed utterances, eg. username/reponame 
   issueTerm = "title"
   label = ""
-  theme = "preferred-color-scheme"
+  theme = "icy-dark"
 
   # Uncomment this if you want a portrait on your start page
   #
