@@ -222,7 +222,8 @@ code {
   font-feature-settings: normal;
   padding: 1px 6px;
   margin: 0 2px;
-  border-radius: 5px;  
+  border-radius: 5px;
+  border-style: outset;  
   font-size: 0.95rem;
   // Default
   border-color: $light-background-secondary;
@@ -255,7 +256,6 @@ pre {
 
   padding: 10px 10px 10px 20px;
   border-radius: 8px;
-  border-style: outset;
   font-size: 0.95rem;
   overflow: auto;
 
@@ -266,7 +266,7 @@ pre {
 
   code {
     background: none !important;
-    border-color: none !important;
+    border-style: none !important;
     margin: 0;
     padding: 0;
     font-size: inherit;
