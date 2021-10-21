@@ -74,7 +74,7 @@ h1 {
 
 h2 {
   font-size: 1.625rem;
-  margin-top: 2em;
+  margin-top: 1em;
   font-family: "EB Garamond", Georgia, "Nimbus Roman No9 L", "Noto Serif CJK SC", "Songti SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 }
 
@@ -222,8 +222,7 @@ code {
   font-feature-settings: normal;
   padding: 1px 6px;
   margin: 0 2px;
-  border-radius: 5px;
-  border-style: outset;
+  border-radius: 5px;  
   font-size: 0.95rem;
   // Default
   border-color: $light-background-secondary;
@@ -256,6 +255,7 @@ pre {
 
   padding: 10px 10px 10px 20px;
   border-radius: 8px;
+  border-style: outset;
   font-size: 0.95rem;
   overflow: auto;
 
