@@ -213,13 +213,7 @@ em, i, strong {
 }
 
 em {
-  font-style: normal;
-  text-emphasis: '•';
-  -webkit-text-emphasis: '•';
-  -moz-text-emphasis: '•';
-  text-emphasis-position: under;
-  -webkit-text-emphasis-position: under;
-  -moz-text-emphasis-position: under;
+  border-bottom-style: dotted;
 }
 
 code {
@@ -229,34 +223,35 @@ code {
   padding: 1px 6px;
   margin: 0 2px;
   border-radius: 5px;
+  border-style: outset;
   font-size: 0.95rem;
   // Default
-  background: $light-background-secondary;
+  border-color: $light-background-secondary;
 
   @media (prefers-color-scheme: dark) {
-    background: $dark-background-secondary;
+    border-color: $dark-background-secondary;
   }
 
   @media (prefers-color-scheme: light) {
-    background: $light-background-secondary;
+    border-color: $light-background-secondary;
   }
 
   [data-theme=dark] & {
-    background: $dark-background-secondary;
+    border-color: $dark-background-secondary;
   }
 
   [data-theme=light] & {
-    background: $light-background-secondary;
+    border-color: $light-background-secondary;
   }
 }
 
 pre {
   [data-theme=dark] & {
-    background-color: $dark-background-secondary;
+    border-color: $dark-background-secondary;
   }
 
   [data-theme=light] & {
-    background-color: $light-background-secondary;
+    border-color: $light-background-secondary;
   }
 
   padding: 10px 10px 10px 20px;
