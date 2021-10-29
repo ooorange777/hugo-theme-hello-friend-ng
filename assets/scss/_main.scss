@@ -291,16 +291,34 @@ pre {
 }
 
 blockquote {
-  border-left: 3px solid #3eb0ef;
+  border-left: 3px solid;
   margin: 40px;
   padding: 10px 20px;
+  // Default color
+  border-left-color: $light-background-secondary;
+
+  @media (prefers-color-scheme: dark) {
+    border-left-color: $dark-background-secondary;
+  }
+
+  @media (prefers-color-scheme: light) {
+    border-left-color: $light-background-secondary;
+  }
+
+  [data-theme=dark] & {
+    border-left-color: $dark-background-secondary;
+  }
+
+  [data-theme=light] & {
+    border-left-color: $light-background-secondary;
+  }
 
   @media #{$media-size-phone} {
     margin: 10px;
     padding: 10px;
   }
 
-  &:before {
+  &::before {
     content: "”";
     font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
     font-display: auto;
