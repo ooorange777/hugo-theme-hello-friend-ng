@@ -8,7 +8,7 @@
 <main class="posts">
 <div class="post-warp {{.Data.Plural}}">
     <h2 class="post-title" style="text-align:right;padding-bottom:2em">-&nbsp;{{ .Data.Plural | humanize }}&nbsp;-</h2>
-{{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
+{{ if and $.Site.Taxonomies.series (eq $termName "series") }}
     <div class="categories-card">
     {{ range $terms }}
         {{ $term := .Term }}
