@@ -187,22 +187,22 @@
   cursor: pointer;
   appearance: none;
   // Default
-  background: $light-background-secondary;
+  color: $light-background-secondary;
 
   @media (prefers-color-scheme: dark) {
-    background: $dark-background-secondary;
+    color: $dark-background-secondary;
   }
 
   @media (prefers-color-scheme: light) {
-    background: $light-background-secondary;
+    color: $light-background-secondary;
   }
 
   [data-theme=dark] & {
-    background: $dark-background-secondary;
+    color: $dark-background-secondary;
   }
 
   [data-theme=light] & {
-    background: $light-background-secondary;
+    color: $light-background-secondary;
   }
 
   + .button {
