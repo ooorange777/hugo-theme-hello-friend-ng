@@ -7,7 +7,7 @@
 <!-- Categories Page -->
 <div class="post-warp {{.Data.Plural}}">
     <h2 class="post-title" style="text-align:right;padding-bottom:2em">-&nbsp;{{ .Data.Plural | humanize }}&nbsp;-</h2>
-{{ if and $.Site.taxonomies.category (eq $termName "categories") }}
+
     <div class="categories-card">
     {{ range $terms }}
         {{ $term := .Term }}
@@ -15,7 +15,7 @@
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
         <div class="card-item">
            <div class="categories" >
-                <a href="{{ .Permalink }}"><h3> <i class="iconfont icon-folder" style="padding-right: 3px"></i> {{ $term | humanize}}  </h3> </a>
+                <a href="{{ .Permalink }}"><h3>  {{ $term | humanize}}  </h3> </a>
                 {{ range first 5 $pages }}   
                 <article class="archive-item">
                 <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
@@ -29,21 +29,7 @@
             </div>
         </div>
         {{ end }}
-    {{ end }}
     </div>
 <!-- //categories-card -->
-
-<!-- Tag cloud Page -->
-{{ else if and $.Site.taxonomies.tags (eq $termName "tags") }}
-    <div class="tag-cloud-tags">
-    {{ range $.Site.taxonomies.tags.ByCount }}
-        {{ if .Name }}
-        <a href="/tags/{{ .Name | urlize}}/"> {{ .Name }} <small>({{ .Count }})</small></a>
-        {{ end }}
-    {{end}}
-    </div>
-{{ end }}
-<!-- //tag-cloud-page -->
-
 </div>
 {{end }}
