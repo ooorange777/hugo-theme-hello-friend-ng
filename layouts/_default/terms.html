@@ -5,9 +5,8 @@
 {{ $length := len $terms }}
 {{ $type := .Type }}
 <!-- Categories Page -->
-<main class="posts">
-<div class="post-warp {{.Data.Plural}}">
-    <h2 class="post-title" style="text-align:right;padding-bottom:2em">-&nbsp;{{ .Data.Plural | humanize }}&nbsp;-</h2>
+<main class="post-warp {{.Data.Plural}}">
+    <h1 class="post-title" style="text-align:right;padding-bottom:2em">{{ .Data.Plural | humanize }}</h1>
 {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
     <div class="categories-card">
     {{ range $terms }}
@@ -46,6 +45,5 @@
 {{ end }}
 <!-- //tag-cloud-page -->
 
-</div>
 </main>
 {{end }}
