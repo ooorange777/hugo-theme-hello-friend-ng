@@ -7,7 +7,7 @@
 <!-- Categories Page -->
 <main class="posts">
 <div class="post-warp {{.Data.Plural}}">
-    <h1 style="padding-top:2em">{{ .Data.Plural | humanize }}</h1>
+    <h1>{{ .Data.Plural | humanize }}</h1>
 {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
     <div class="categories-card">
     {{ range $terms }}
