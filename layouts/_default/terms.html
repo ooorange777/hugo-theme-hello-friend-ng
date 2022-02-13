@@ -6,8 +6,8 @@
 {{ $type := .Type }}
 <!-- Categories Page -->
 <main class="posts">
-<div class="post-warp {{.Data.Plural}}" style="width: 720px">
-    <h1 class="post-title" style="padding-top:2em">{{ .Data.Plural | humanize }}</h1>
+<div class="post-warp {{.Data.Plural}}">
+    <h1 style="padding-top:2em">{{ .Data.Plural | humanize }}</h1>
 {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
     <div class="categories-card">
     {{ range $terms }}

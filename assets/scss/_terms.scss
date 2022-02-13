@@ -1,4 +1,11 @@
 .post-warp {
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  margin: 20px auto;
+  @media #{$media-size-tablet} {
+    max-width: 600px;
+  }
 
     .archive-item {
       margin-left: 2rem;
