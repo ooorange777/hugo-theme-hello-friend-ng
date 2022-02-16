@@ -242,7 +242,7 @@ code {
     [data-theme=light] & {
       color: #ccc;
     }
-    
+
   // Default
   background: $light-background-secondary;
 
@@ -338,15 +338,6 @@ blockquote {
     padding: 10px;
   }
 
-  blockquote::before {
-    content: "”";
-    font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
-    font-display: auto;
-    font-size: 3.875rem;
-    position: absolute;
-    left: -40px;
-    top: -20px;
-  }
 
   p:first-of-type {
     margin-top: 0;
@@ -355,6 +346,16 @@ blockquote {
   p:last-of-type {
     margin-bottom: 0;
   }
+}
+
+blockquote::before {
+  content: "”";
+  font-family: "EB Garamond", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+  font-display: auto;
+  font-size: 3.875rem;
+  position: absolute;
+  left: -40px;
+  top: -20px;
 }
 
 ul,
