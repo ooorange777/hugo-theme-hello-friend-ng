@@ -36,7 +36,6 @@ pre[class*="language-"] {
 	margin: .5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
-	border-style: none;
 }
 
 :not(pre) > code[class*="language-"],
@@ -49,7 +48,6 @@ pre[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
-	border-style: none;
 }
 
 .token.comment,
