@@ -336,7 +336,7 @@ blockquote {
     &:before {
       content: "”";
       font-display: auto;
-      font-size: 3rem;
+      font-size: 2rem;
       margin-right: .25em;
       vertical-align: .4em;
     }
@@ -347,7 +347,7 @@ blockquote {
   }
 
   p:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
