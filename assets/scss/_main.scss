@@ -304,8 +304,8 @@ pre {
 
 blockquote {
   border-left: 3px solid;
-  margin: 40px;
-  padding: 10px 20px;
+  margin: 1rem 10px;
+  padding: .5em 10px;
   font-weight: 250;
   font-style: italic;
   // Default color
@@ -332,6 +332,16 @@ blockquote {
     padding: 10px;
   }
 
+  p {
+    &:before {
+      content: "”";
+      font-display: auto;
+      font-size: 3rem;
+      margin-right: .25em;
+      vertical-align: .4em;
+    }
+  }
+
   p:first-of-type {
     margin-top: 0;
   }
@@ -339,15 +349,6 @@ blockquote {
   p:last-of-type {
     margin-bottom: 0;
   }
-}
-
-blockquote p::before {
-  content: "”";
-  font-display: auto;
-  font-size: 3.875rem;
-  position: absolute;
-  left: -40px;
-  top: -20px;
 }
 
 ul,
