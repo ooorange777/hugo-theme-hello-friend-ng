@@ -136,17 +136,8 @@
     {{ end }}
 
 	{{ if .Site.Params.utteranc.enable }}
-	  <script src="https://utteranc.es/client.js"
-	  repo="{{ .Site.Params.utteranc.repo }}"
-	  issue-term="{{ .Site.Params.utteranc.issueTerm }}"
-	  theme="{{ .Site.Params.utteranc.theme }}"
-	  {{ with .Site.Params.utteranc.label }}
-	    label="{{ . }}"
-      {{ end }}
-	  crossorigin="anonymous"
-	  async>
-	  </script>
-    <div id="utterances"></div>
+	    {{ partial "utterance.html" . }}
+        <div id="utterances"></div>
 	{{ end }}
   </main>
 {{ end }}
