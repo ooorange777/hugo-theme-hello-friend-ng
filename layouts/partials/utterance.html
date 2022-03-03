@@ -16,7 +16,7 @@
 </script>
 
 {{- define "utterances-theme" -}}
-    {{- $theme := .Site.Params.utterancesTheme | default "github-light" -}}
+    {{- $theme := .Site.Params.utteranc.theme | default "github-light" -}}
     
     const isDark = getCurrentTheme() === 'dark';
         if (isDark) {
