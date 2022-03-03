@@ -6,35 +6,43 @@
 {{ $type := .Type }}
 <!-- Categories Page -->
 <main class="posts">
-<div class="post-warp {{.Data.Plural}}">
     <h1>{{ .Data.Plural | humanize }}</h1>
 {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
-    <div class="categories-card">
+    <div class="post-group">
     {{ range $terms }}
         {{ $term := .Term }}
         {{ $pages := .Pages }}
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
-        <div class="card-item">
-           <div class="categories" >
-                <a href="{{ .Permalink }}"><h3> {{ $term | humanize}}  </h3> </a>
+           <div class="post-year" > {{ $term | humanize}}  </div>
+		   
+		   <ul class="posts-lists">
                 {{ range first 3 $pages }}   
-                <article class="archive-item">
-                <a href="{{ .Permalink }}" class="archive-item-link">{{ .Title }}</a>
-                </article>
+                <li class="post-item">
+                <a href="{{ .Permalink }}">
+					<span class="post-title">{{.Title}}</span>
+					<span class="post-day">
+						{{ if .Site.Params.dateformShort }}
+                            {{ .Date.Format .Site.Params.dateformShort }}
+                        {{ else }}
+                            {{ .Date.Format "Jan 2"}}
+                        {{ end }}
+					</span>
+				</a>
+				</li>
                 {{ end }}
-                {{ if gt (len $pages) 3 }}
-                <span class="more-post">
-                    <a href="{{ .Permalink }}" class="more-post-link">More  >></a>
-                </span> 
+				{{ if gt (len $pages) 3 }}
+                <li class="post-item">
+                    <a href="{{ .Permalink }}">More  >></a>
+                </li> 
                {{ end }}
-            </div>
-        </div>
+			</ul>
         {{ end }}
     {{ end }}
     </div>
 <!-- //categories-card -->
 
 <!-- Tag cloud Page -->
+<div class="post-warp {{.Data.Plural}}">
 {{ else if and $.Site.Taxonomies.tags (eq $termName "tags") }}
     <div class="tag-cloud-tags">
     {{ range $.Site.Taxonomies.tags.ByCount }}
