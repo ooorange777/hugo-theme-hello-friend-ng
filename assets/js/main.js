@@ -54,4 +54,4 @@ window.addEventListener( "DOMContentLoaded", event => {
   if (typeof loadComments === 'function') {
       loadComments()
   }
-}, {once: true});
+});
