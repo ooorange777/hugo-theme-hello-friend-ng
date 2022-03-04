@@ -8,7 +8,7 @@
 <main class="posts">
     <h1>{{ .Data.Plural | humanize }}</h1>
 {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
-    {{ range $terms.GroupByCount }}
+    {{ range .Data.Terms.ByCount }}
         {{ $term := .Term }}
         {{ $pages := .Pages }}
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
