@@ -13,7 +13,6 @@
         {{ $pages := .Pages }}
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
 
-        <div class="posts-group">
            <div class="post-year" > {{ $term | humanize}}  </div>
 		   
 		   <ul class="posts-list">
@@ -37,7 +36,6 @@
 			</ul>
         {{ end }}
     {{ end }}
-    </div>
 <!-- //categories-card -->
 
 <!-- Tag cloud Page -->
