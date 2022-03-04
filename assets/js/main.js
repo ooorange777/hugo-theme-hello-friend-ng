@@ -49,3 +49,9 @@ if (themeToggle) {
 } else {
   localStorage.removeItem("theme");
 }
+
+window.addEventListener( "DOMContentLoaded", event => {
+  if (typeof loadComments === 'function') {
+      loadComments()
+  }
+}, {once: true});

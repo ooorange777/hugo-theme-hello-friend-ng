@@ -1,4 +1,5 @@
 <script>
+    function loadComments() {
         (function() {
             var utterances = document.getElementById("utterances");
             var script = document.createElement('script');
@@ -13,6 +14,7 @@
             {{ end }}
             utterances.appendChild(script);
         })();
+    }
 </script>
 
 {{- define "utterances-theme" -}}
