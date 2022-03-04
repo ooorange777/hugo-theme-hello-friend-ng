@@ -34,7 +34,6 @@
     display: flex;
     margin-bottom: 1.9em;
     line-height: normal;
-    list-style: none;
 
     @media #{$media-size-tablet} {
       display: block;
@@ -58,6 +57,7 @@
       padding-top: 6px;
       margin-right: 1.8em;
       font-size: 1.6em;
+      list-style: none;
       @include dimmed;
 
       @media #{$media-size-tablet} {
