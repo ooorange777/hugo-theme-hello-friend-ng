@@ -12,8 +12,8 @@
         {{ $term := .Term }}
         {{ $pages := .Pages }}
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
-
-           <div class="post-year" > {{ $term | humanize}}  </div>
+        <ul class="posts-group">
+           <li class="post-year" > {{ $term | humanize}}  </li>
 		   
 		   <ul class="posts-list">
                 {{ range first 3 $pages }}   
@@ -30,10 +30,12 @@
 				</a>
                 {{ end }}
 				{{ if gt (len $pages) 3 }}
-                    <a class="post-day" href="{{ .Permalink }}">More  >></a>
+                    <span class="post-day"><a href="{{ .Permalink }}">More  >></a></span>
                 </li> 
                {{ end }}
 			</ul>
+            
+        </ul>
         {{ end }}
     {{ end }}
 <!-- //categories-card -->
