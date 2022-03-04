@@ -15,7 +15,7 @@
         {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
            <div class="post-year" > {{ $term | humanize}}  </div>
 		   
-		   <ul class="posts-lists">
+		   <ul class="posts-list">
                 {{ range first 3 $pages }}   
                 <li class="post-item">
                 <a href="{{ .Permalink }}">
