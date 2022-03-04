@@ -136,7 +136,9 @@
     {{ end }}
 
 	{{ if .Site.Params.utteranc.enable }}
-        <div id="utterances"></div>
+      <div id="utterances">
+        {{ partial "utterance.html" . }}
+      </div>
 	{{ end }}
   </main>
 {{ end }}
