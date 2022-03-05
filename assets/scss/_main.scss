@@ -339,6 +339,38 @@ blockquote {
   p:last-of-type {
     margin-bottom: 10px;
   }
+
+  footer {
+    margin: line-height 0;
+    color: $light-color-secondary;
+    @media (prefers-color-scheme: dark) {
+      color: $dark-color-secondary;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $light-color-secondary;
+    }
+
+    [data-theme=dark] & {
+      color: $dark-color-secondary;
+    }
+
+    [data-theme=light] & {
+      color: $light-color-secondary;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    cite {
+      &:before {
+        padding: 0 .5em;
+        content: "—";
+      }
+    }
+  }
 }
 
 ul,
