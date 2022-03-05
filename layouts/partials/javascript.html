@@ -9,31 +9,3 @@
         <script src="{{ $val }}"></script>
     {{ end }}
 {{ end }}
-
-<script>
-    function loadComments() {
-        (function() {
-            var utterances = document.getElementById("utterances");
-            var script = document.createElement('script');
-            script.src = 'https://utteranc.es/client.js';
-            script.async = true;
-            script.crossOrigin = 'anonymous';
-            script.setAttribute('repo', '{{ .Site.Params.utteranc.repo }}');
-            script.setAttribute('issue-term', '{{ .Site.Params.utteranc.issueTerm }}');
-            {{ template "utterances-theme" . }}
-            {{ with .Site.Params.utteranc.label }}
-                script.setAttribute('label', '{{ . }}');
-            {{ end }}
-            utterances.appendChild(script);
-        })();
-    }
-</script>
-
-{{- define "utterances-theme" -}}    
-    const isDark = getCurrentTheme() === 'dark';
-        if (isDark) {
-            script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
-        } else {
-            script.setAttribute('theme', '{{ .Site.Params.utteranc.theme | default "github-light" }}');
-        }
-{{- end -}}

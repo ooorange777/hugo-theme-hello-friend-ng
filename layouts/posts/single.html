@@ -137,6 +137,26 @@
 
 	{{ if .Site.Params.utteranc.enable }}
       <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+      repo="{{ .Site.Params.utteranc.repo }}"
+      issue-term="{{ .Site.Params.utteranc.issueTerm }}"
+      {{ template "utterances-theme" . }}
+      {{ with .Site.Params.utteranc.label }}
+        label="{{ . }}"
+      {{ end }}
+      crossorigin="anonymous"
+      async>
+      </script>
+
+      {{- define "utterances-theme" -}}
+        const isDark = getCurrentTheme() === 'dark';
+          if (isDark) {
+            script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
+          } else {
+            script.setAttribute('theme', '{{ .Site.Params.utteranc.theme | default "github-light" }}');
+          }
+      {{- end -}}
+
 	{{ end }}
   </main>
 {{ end }}
