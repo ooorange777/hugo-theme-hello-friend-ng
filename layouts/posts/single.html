@@ -136,6 +136,16 @@
     {{ end }}
 
 	{{ if .Site.Params.utteranc.enable }}
+
+  {{- define "utterances-theme" -}}
+  const isDark = getCurrentTheme() === 'dark';
+    if (isDark) {
+      script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
+    } else {
+      script.setAttribute('theme', '{{ .Site.Params.utteranc.theme | default "github-light" }}');
+    }
+  {{- end -}}
+
       <div id="utterances"></div>
       <script src="https://utteranc.es/client.js"
       repo="{{ .Site.Params.utteranc.repo }}"
@@ -147,16 +157,6 @@
       crossorigin="anonymous"
       async>
       </script>
-
-      {{- define "utterances-theme" -}}
-        const isDark = getCurrentTheme() === 'dark';
-          if (isDark) {
-            script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
-          } else {
-            script.setAttribute('theme', '{{ .Site.Params.utteranc.theme | default "github-light" }}');
-          }
-      {{- end -}}
-
 	{{ end }}
   </main>
 {{ end }}
