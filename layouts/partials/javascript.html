@@ -29,9 +29,7 @@
     }
 </script>
 
-{{- define "utterances-theme" -}}
-    {{- $theme := .Site.Params.utteranc.theme | default "github-light" -}}
-    
+{{- define "utterances-theme" -}}    
     const isDark = getCurrentTheme() === 'dark';
         if (isDark) {
             script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
