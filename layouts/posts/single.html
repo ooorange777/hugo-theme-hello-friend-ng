@@ -138,12 +138,15 @@
 	{{ if .Site.Params.utteranc.enable }}
 
   {{- define "utterances-theme" -}}
-  const isDark = getCurrentTheme() === 'dark';
-    if (isDark) {
-      script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
-    } else {
-      script.setAttribute('theme', '{{ .Site.Params.utteranc.theme | default "github-light" }}');
-    }
+  <script>
+    var script = document.createElement('script');
+    const isDark = getCurrentTheme() === 'dark';
+      if (isDark) {
+        script.setAttribute('theme', '{{ .Site.Params.utteranc.themeDark | default "github-dark-orange" }}');
+      } else {
+        script.setAttribute('theme', '{{ .Site.Params.utteranc.theme | default "github-light" }}');
+      }
+  </script>
   {{- end -}}
 
       <div id="utterances"></div>
