@@ -14,16 +14,12 @@ const chosenThemeIsLight = chosenTheme == "light";
 function detectOSColorTheme() {
   if (chosenThemeIsDark) {
     document.documentElement.setAttribute("data-theme", "dark");
-    document.getElementById('utterance').setAttribute('theme', '{{ .Site.Params.utteranc.themeDark }}');
   } else if (chosenThemeIsLight) {
     document.documentElement.setAttribute("data-theme", "light");
-    document.getElementById('utterance').setAttribute('theme', '{{ .Site.Params.utteranc.theme }}');
   } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.documentElement.setAttribute("data-theme", "dark");
-    document.getElementById('utterance').setAttribute('theme', '{{ .Site.Params.utteranc.themeDark }}');
   } else {
     document.documentElement.setAttribute("data-theme", "light");
-    document.getElementById('utterance').setAttribute('theme', '{{ .Site.Params.utteranc.theme }}');
   }
 }
 
