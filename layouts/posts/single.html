@@ -137,7 +137,7 @@
 
 	{{ if .Site.Params.utteranc.enable }}
       <div id="utterances"></div>
-      <script src="https://utteranc.es/client.js"
+      <script id="utterances" src="https://utteranc.es/client.js"
       repo="{{ .Site.Params.utteranc.repo }}"
       issue-term="{{ .Site.Params.utteranc.issueTerm }}"
       theme="{{ .Site.Params.utteranc.theme }}"
@@ -146,6 +146,13 @@
       {{ end }}
       crossorigin="anonymous"
       async>
+      </script>
+      <script>
+        if (storageColorScheme == "Light") {
+          document.getElementById('utterances').setAttribute('theme', '{{ .Site.Params.utteranc.theme }}')
+        } else if (storageColorScheme == "Dark") {
+          document.getElementById('utterances').setAttribute('theme', '{{ .Site.Params.utteranc.themeDark }}')
+        }
       </script>
 	{{ end }}
   </main>
