@@ -147,13 +147,6 @@
       crossorigin="anonymous"
       async>
       </script>
-      <script>
-        if (storageColorScheme == "light") {
-          document.getElementById('utterance').setAttribute('theme', '{{ .Site.Params.utteranc.theme }}')
-        } else if (storageColorScheme == "dark") {
-          document.getElementById('utterance').setAttribute('theme', '{{ .Site.Params.utteranc.themeDark }}')
-        }
-      </script>
 	{{ end }}
   </main>
 {{ end }}
